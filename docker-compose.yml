@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: car_rental_api_1
+    build:
+      context: ./src 
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    restart: always
+    depends_on: 
+      - db
+    environment:
+      DATASOURCE_URL: server=db;port=3306;userid=root;password=root;database=car_rental;
+    networks:
+      - backend
+
+  db:
+    container_name: car_rental_db_1
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: car_rental
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend  
+
+volumes:
+  db-data:
+
+networks:
+  backend:
