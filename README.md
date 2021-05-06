@@ -1,9 +1,9 @@
-# Car Rental API  
+# Car Rental API
 
-### Sumary  
+### Sumary
 
-A first code aproach with EF Core, no SQL will be found here. 
-The server will try to migrate the DB everytime you launch the project without any other command other than running it. 
+A first code aproach with EF Core, no SQL will be found here.
+The server will try to migrate the DB everytime you launch the project without any other command other than running it.
 Dependecy Injection using Autofac.
 DDD layered aproach.
 Unit test.
@@ -11,7 +11,7 @@ Integration test.
 SSL.
 DB non-root user & secure password.
 
-### TODO  
+### TODO
 
 ¡Migration fix Autofac can't load the FleetContext when running a migration!
 
@@ -22,55 +22,45 @@ Github actions CI/CD.
 Basic Auth.
 More features?
 
+### Instructions
 
-### Instructions  
-
-
-#### Notes  
+#### Notes
 
 - This is tested on a MacOS Docker Desktop but it should work for both Windows and Linux host machines.
 
+## Deploy
 
-## Deploy  
-
-
-### Requeriments  
+### Requeriments
 
 - docker
 - docker-composer
 - dotnet core (local dev)
 
-
-### To run  
+### To run
 
 `docker-composer up`
 
-
-### Watch dotnetcore logs  
+### Watch dotnetcore logs
 
 `docker logs -f car_rental_api_1`
 
-
-### Manage DB docker  
+### Manage DB docker
 
 `docker exec -ti car_rental_db_1 bash`
 
 Now inside the container you can login into the Mysql instance, password is root (see docker-composer.yml).
 `mysql -u root -p`
 
+## Develop
 
-## Develop  
-
-
-### Requeriments  
+### Requeriments
 
 - docker
 - docker-compose
 - dotnetcore
 - A proper IDE will help
 
-
-### Migrate DB  
+### Migrate DB
 
 The project uses the CodeFirst approach. So the data base is managed just via code skipping SQL.
 
