@@ -2,25 +2,24 @@
 
 ### Sumary
 
-A first code aproach with EF Core, no SQL will be found here.
-The server will try to migrate the DB everytime you launch the project without any other command other than running it.
-Dependecy Injection using Autofac.
-DDD layered aproach.
-Unit test.
-Integration test.
-SSL.
-DB non-root user & secure password.
+- A first code aproach with EF Core, no SQL will be found here.
+- The server will try to migrate the DB everytime you launch the project without any other command other than running it.
+- Dependecy Injection using Autofac.
+- DDD layered aproach.
+- Unit test.
+- Integration test.
+- SSL.
+- DB non-root user & secure password.
 
 ### TODO
 
-¡Migration fix Autofac can't load the FleetContext when running a migration!
-
-Improve with streams.
-CarRent could have a ref to car and avoid the IsFree writing everytime we return a car.
-Non happy path tests.
-Github actions CI/CD.
-Basic Auth.
-More features?
+- ¡Migration fix Autofac can't load the FleetContext when running a migration!
+- Improve with streams.
+- CarRent could have a ref to car and avoid the IsFree writing everytime we return a car.
+- Non happy path tests.
+- Github actions CI/CD.
+- Basic Auth.
+- More features?
 
 ### Instructions
 
